@@ -14,6 +14,8 @@
 
     <!-- Importar o Bootstrap -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Importar o Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 
 </head>
 
@@ -23,7 +25,10 @@
 
         <!-- Menu -->
         {% block menu %}
-        <h4>Código do seu Menu</h4>
+        <h4>
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            Código do seu Menu
+        </h4>
         <!-- Coloque dentro deste bloco todo o código do menu -->
         {% endblock %}
 
