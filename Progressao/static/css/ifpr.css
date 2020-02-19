@@ -1,0 +1,54 @@
+.bg-ifpr {
+    background-color: #007834;
+}
+
+.text-ifpr {
+    color: #007834;
+}
+
+.border-ifpr {
+    border-color: #007834;
+}
+
+.font-75 {
+    font-size: 75%;
+}
+
+.font-115 {
+    font-size: 115%;
+}
+
+.font-125 {
+    font-size: 125%;
+}
+
+.font-150 {
+    font-size: 150%;
+}
+
+.font-175 {
+    font-size: 175%;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child::before {
+    top: 15px !important;
+}
+
+.links-rapidos .btn{
+    /* font-weight: bold; */
+}
+
+/* Todo a que tem a classe navlink dentro do navbar */
+.navbar a.nav-link{
+    color: white !important;
+}
+
+.navbar a.nav-link:hover{
+    color: #DEDEDE !important;
+}
+
+.alert dl, .alert ol, .alert ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
