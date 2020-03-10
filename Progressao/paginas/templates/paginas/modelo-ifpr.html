@@ -40,12 +40,12 @@
 
         <!-- Bloco com a logo da cidade -->
         {% block logo %}
-        <div class="container-fluid bg-white">
+        <!-- <div class="container-fluid bg-white">
             <div class="container border-bottom border-light p-3">
                 <img src="{% static 'img/ifpr-logo.png' %}" alt="" style="max-height: 65px;" class="img-fluid">
             </div>
 
-        </div>
+        </div> -->
         {% endblock %}
 
 
@@ -54,7 +54,9 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-ifpr font-115">
 
             <div class="container">
-                <a class="navbar-brand" href="#">SisProg</a>
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/ifpr-circle.png' %}" height="40" alt="">
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -189,7 +191,16 @@
         <!-- Rodapé -->
         {% block rodape %}
         <div class="container-fluid bg-light text-center p-3">
-            <span class="">Desenvolvido por Rafael Zottesso. 2020.</span>
+            <div class="row">
+                <div class="col-md text-center">
+                    <img src="{% static 'img/ifpr.png' %}" height="64" alt="">
+                    <span class="lead">Desenvolvido por Rafael Zottesso. 2020.</span>
+                </div>
+                <!-- <div class="col-md text-left">
+                    <img src="{% static 'img/ifpr.png' %}" height="100" alt="">
+                </div> -->
+
+            </p>
         </div>
         {% endblock %}
 
