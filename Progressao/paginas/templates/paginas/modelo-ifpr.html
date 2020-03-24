@@ -65,8 +65,10 @@
                     <ul class="navbar-nav mr-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i>
-                                Início</a>
+                            <a class="nav-link" href="{% url 'index' %}">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Início
+                            </a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -92,7 +94,7 @@
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{% url 'sobre' %}">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 Sobre
                             </a>
