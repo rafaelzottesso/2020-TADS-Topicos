@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', 
     # Ativa o módulo páginas
     'paginas.apps.PaginasConfig',
+    'cadastros.apps.CadastrosConfig',
 ]
 
 MIDDLEWARE = [
