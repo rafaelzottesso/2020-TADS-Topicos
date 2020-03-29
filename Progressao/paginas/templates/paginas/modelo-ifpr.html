@@ -78,18 +78,14 @@
                                 Cadastros
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                                    Empresa</a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                                    Responsável Jurídico</a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-folder-o" aria-hidden="true"></i>
-                                    Setor</a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                    Resíduos</a>
+                                
+                                <a class="dropdown-item" href="{% url 'listar-campos' %}">
+                                    Campo
+                                </a>
+                                <a class="dropdown-item" href="{% url 'listar-atividades' %}">
+                                    Atividade
+                                </a>
+
                             </div>
                         </li>
 

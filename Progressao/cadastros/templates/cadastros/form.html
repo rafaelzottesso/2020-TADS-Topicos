@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block conteudo %}
 <h3>Cadastro</h3>
 
@@ -15,9 +17,9 @@
 
     {% csrf_token %}
 
-    {{ form.as_p }}
+    {{ form|crispy }}
 
-    <button type="submit" class="btn btn-light">Cadastrar</button>
+    <button type="submit" class="btn btn-light mt-3">Cadastrar</button>
 
 </form>
 
