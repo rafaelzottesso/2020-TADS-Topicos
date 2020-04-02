@@ -207,44 +207,44 @@ class ValidacaoDelete(DeleteView):
 
 class CampusList(ListView):
     model = Campus
-    template_name = 'cadastros/campus.html'
+    template_name = 'cadastros/listas/campus.html'
 
 
 class StatusList(ListView):
     model = Status
-    template_name = 'cadastros/status.html'
+    template_name = 'cadastros/listas/status.html'
 
 
 class SituacaoList(ListView):
     model = Situacao
-    template_name = 'cadastros/situacao.html'
+    template_name = 'cadastros/listas/situacao.html'
 
 
 class ClasseList(ListView):
     model = Classe
-    template_name = 'cadastros/classe.html'
+    template_name = 'cadastros/listas/classe.html'
 
 
 class ProgressaoList(ListView):
     model = Progressao
-    template_name = 'cadastros/progressao.html'
+    template_name = 'cadastros/listas/progressao.html'
 
 
 class CampoList(ListView):
     model = Campo
-    template_name = 'cadastros/campo.html'
+    template_name = 'cadastros/listas/campo.html'
 
 
 class AtividadeList(ListView):
     model = Atividade
-    template_name = 'cadastros/atividade.html'
+    template_name = 'cadastros/listas/atividade.html'
 
 
 class ComprovanteList(ListView):
     model = Comprovante
-    template_name = 'cadastros/comprovante.html'
+    template_name = 'cadastros/listas/comprovante.html'
 
 
 class ValidacaoList(ListView):
     model = Validacao
-    template_name = 'cadastros/validacao.html'
+    template_name = 'cadastros/listas/validacao.html'
