@@ -2,9 +2,9 @@ from django.urls import path
 
 # Importa as views que a gente criou
 from .views import CampoCreate, StatusCreate, ClasseCreate, CampusCreate, AtividadeCreate
-from .views import CampoUpdate, AtividadeUpdate
-from .views import CampoDelete, AtividadeDelete
-from .views import CampoList, AtividadeList
+from .views import CampoUpdate, AtividadeUpdate, StatusUpdate, ClasseUpdate, CampusUpdate
+from .views import CampoDelete, AtividadeDelete, StatusDelete, ClasseDelete, CampusDelete
+from .views import CampoList, AtividadeList, StatusList, ClasseList, CampusList
 
 # Tem que ser urlpatterns porque é padrão do Django
 urlpatterns = [
