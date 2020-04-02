@@ -38,10 +38,10 @@ class Campus(models.Model):
 
 
 class Atividade(models.Model):
-    numero = models.IntegerField(verbose_name="Número")
+    numero = models.IntegerField(verbose_name="Número", unique=True)
     descricao = models.CharField(max_length=150, verbose_name="Descrição")
     pontos = models.DecimalField(decimal_places=1, max_digits=4)
-    detalhes = models.CharField(max_length=100)
+    detalhes = models.CharField(max_length=100, null=True, blank=True)
 
     campo = models.ForeignKey(Campo, on_delete=models.PROTECT)
 

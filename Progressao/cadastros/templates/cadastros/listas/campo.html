@@ -24,10 +24,10 @@
             <td>{{ campo.descricao }}</td>
             <td>
                 <a href="{% url 'editar-campo' campo.pk %}" class="btn btn-warning btn-sm" title="Editar">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
                 </a>
                 <a href="{% url 'excluir-campo' campo.pk %}" class="btn btn-danger btn-sm" title="Excluir">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                 </a>
             </td>
         </tr>
