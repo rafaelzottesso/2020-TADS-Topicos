@@ -53,14 +53,14 @@ class Situacao(models.Model):
 class Classe(models.Model):
     nome = models.CharField(max_length=50)
     nivel = models.IntegerField(verbose_name="nível")
-    descricao = models.CharField(max_length=150, verbose_name="descrição")
+    descricao = models.CharField(max_length=150, verbose_name="descrição", null=True, blank=True)
 
     def __str__(self):
-        return "{} {} ({})".format(self.nome, self.nivel, self.descricao)
+        return "{} nível {}".format(self.nome, self.nivel)
 
 
 class Progressao(models.Model):
-    classe = models.ForeignKey(Classe, on_delete=models.PROTECT)
+    classe = models.ForeignKey(Classe, on_delete=models.PROTECT, verbose_name="classe pretendida")
     data_inicial = models.DateField()
     data_final = models.DateField()
     observacao = models.CharField(max_length=255, verbose_name="observação")
@@ -79,15 +79,19 @@ class Campo(models.Model):
 
 
 class Atividade(models.Model):
-    numero = models.IntegerField(verbose_name="Número", unique=True)
-    descricao = models.CharField(max_length=150, verbose_name="descrição")
-    pontos = models.DecimalField(decimal_places=2, max_digits=5)
-    detalhes = models.CharField(max_length=100, null=True, blank=True)
-
     campo = models.ForeignKey(Campo, on_delete=models.PROTECT)
+    numero = models.IntegerField(verbose_name="Número")
+    descricao = models.CharField(max_length=255, verbose_name="descrição")
+    pontos = models.DecimalField(decimal_places=2, max_digits=5)
+    detalhes = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return "{} - {} ({})".format(self.numero, self.descricao, self.campo.nome)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["numero", "campo"], name="unica_num_atividade_campo")
+        ]
 
 
 class Comprovante(models.Model):

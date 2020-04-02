@@ -47,14 +47,14 @@ class CampoCreate(CreateView):
     model = Campo
     fields = ['nome', 'descricao']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-campos')
+    success_url = reverse_lazy('listar-campo')
 
 
 class AtividadeCreate(CreateView):
     model = Atividade
-    fields = ['numero', 'descricao', 'pontos', 'detalhes', 'campo']
+    fields = ['campo', 'numero', 'descricao', 'pontos', 'detalhes']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-atividades')
+    success_url = reverse_lazy('listar-atividade')
 
 
 class ComprovanteCreate(CreateView):
@@ -62,7 +62,7 @@ class ComprovanteCreate(CreateView):
     fields = ['progressao', 'atividade',
               'quantidade', 'data', 'data_final', 'arquivo']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-comprovantes')
+    success_url = reverse_lazy('listar-comprovante')
 
 
 class ValidacaoCreate(CreateView):
@@ -120,14 +120,14 @@ class CampoUpdate(UpdateView):
     model = Campo
     fields = ['nome', 'descricao']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-campos')
+    success_url = reverse_lazy('listar-campo')
 
 
 class AtividadeUpdate(UpdateView):
     model = Atividade
-    fields = ['numero', 'descricao', 'pontos', 'detalhes', 'campo']
+    fields = ['campo', 'numero', 'descricao', 'pontos', 'detalhes']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-atividades')
+    success_url = reverse_lazy('listar-atividade')
 
 
 class ComprovanteUpdate(UpdateView):
@@ -135,7 +135,7 @@ class ComprovanteUpdate(UpdateView):
     fields = ['progressao', 'atividade',
               'quantidade', 'data', 'data_final', 'arquivo']
     template_name = 'cadastros/form.html'
-    success_url = reverse_lazy('listar-comprovantes')
+    success_url = reverse_lazy('listar-comprovante')
 
 
 class ValidacaoUpdate(UpdateView):
@@ -181,25 +181,25 @@ class ProgressaoDelete(DeleteView):
 class CampoDelete(DeleteView):
     model = Campo
     template_name = 'cadastros/form-excluir.html'
-    success_url = reverse_lazy('listar-campos')
+    success_url = reverse_lazy('listar-campo')
 
 
 class AtividadeDelete(DeleteView):
     model = Atividade
     template_name = 'cadastros/form-excluir.html'
-    success_url = reverse_lazy('listar-atividades')
+    success_url = reverse_lazy('listar-atividade')
 
 
 class ComprovanteDelete(DeleteView):
     model = Comprovante
     template_name = 'cadastros/form-excluir.html'
-    success_url = reverse_lazy('listar-comprovantes')
+    success_url = reverse_lazy('listar-comprovante')
 
 
 class ValidacaoDelete(DeleteView):
     model = Validacao
     template_name = 'cadastros/form-excluir.html'
-    success_url = reverse_lazy('listar-validacoes')
+    success_url = reverse_lazy('listar-validacao')
 
 
 ################# LISTA #################

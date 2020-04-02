@@ -90,3 +90,11 @@ Alerta na validação dos formulários (login com senha errada, por exemplo)
     margin-top: 0;
     margin-bottom: 0;
 }
+
+
+/*
+Largura máxima das tabelas para não ficar mal formatada
+*/
+table td{
+    max-width: 500px;
+}

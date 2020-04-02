@@ -8,12 +8,11 @@
     <a href="{% url 'cadastrar-atividade' %}" class="btn btn-primary btn-sm float-right">Adicionar atividade</a>
 </h3>
 
-
-
 <hr>
 <div class="table-responsive">
     <table class="table table-striped">
         <tr>
+            <th>Campo</th>
             <th>Número</th>
             <th>Descrição</th>
             <th>Pontuação</th>
@@ -23,6 +22,7 @@
 
         {% for atividade in object_list %}
         <tr>
+            <td>{{ atividade.campo.nome }}</td>
             <td>{{ atividade.numero }}</td>
             <td>{{ atividade.descricao }}</td>
             <td>{{ atividade.pontos }}</td>

@@ -24,3 +24,13 @@
 </form>
 
 {% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function () {
+        // $("input:enabled:visible:first").focus();
+
+        $("input[name*=data]").attr("type", "date");
+    });
+</script>
+{% endblock %}
