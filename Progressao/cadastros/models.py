@@ -27,6 +27,7 @@ class Servidor(models.Model):
     nome_completo = models.CharField(max_length=100)
     siape = models.CharField(max_length=10)
     cpf = models.CharField(max_length=14, verbose_name="CPF")
+    campus = models.ForeignKey(Campus, on_delete=models.PROTECT)
     usuario = models.ForeignKey(
         User, on_delete=models.PROTECT, verbose_name="usuário")
 
